@@ -1,0 +1,68 @@
+﻿<Window x:Class="LowerApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LowerApp"
+        mc:Ignorable="d"
+        Height="480" Width="640" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#00b09b" Offset="0"/>
+            <GradientStop Color="#96c93d" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Content="Оффнуть" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right" Width="80" Height="30" BorderBrush="White" Foreground="White" Click="Button_Click_2">
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0.01"/>
+            </Button.Background>
+        </Button>
+
+        <TextBlock Text="Lower3K" Grid.ColumnSpan="3" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="80" FontFamily="Segoe UI Light" TextDecorations="Underline" RenderTransformOrigin="1,0.5" >
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="White" Opacity="0.7"/>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <Border Grid.Column="0" Grid.Row="1" BorderBrush="White" BorderThickness="1">
+            <TextBox x:Name="MainBox" Grid.Row="1" Foreground="White" AcceptsReturn="True" SelectionBrush="#FFF7F720" CaretBrush="White">
+            <TextBox.BorderBrush>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </TextBox.BorderBrush>
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.01"/>
+            </TextBox.Background>
+        </TextBox>
+        </Border>
+            <Border Grid.Column="1" Grid.Row="1" BorderBrush="White" BorderThickness="1">
+            <TextBox IsReadOnly="True" SelectionBrush="#FFF7F720" AcceptsReturn="True" x:Name="MainBlock" Foreground="White">
+                <TextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0.01"/>
+                </TextBox.Background>
+            </TextBox>
+        </Border>
+        
+        <Button Content="Опустить" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="50" BorderBrush="White" Foreground="White" Click="Button_Click">
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0.01"/>
+            </Button.Background>
+        </Button>
+
+        <Button Content="Очистить" Grid.Row="2" Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="50" BorderBrush="White" Foreground="White" Click="Button_Click_1">
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0.01"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
